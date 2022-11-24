@@ -1,0 +1,130 @@
+<!-- Practica 02-HTML MisionFrontEnd
+Ricardo Polanco Blanco
+Taqueria
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taqueria Hydrobius</title>
+    <link rel="icon" href="./image/Tacos6.png" type="image/png" sizes="16x16">
+    <style>
+        body{
+            background-color: rgb(209, 207, 207);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Taqueria Hydrobius</h1>
+        <img style="float: none;width:300px;height: 300px;" src="./image/Tacos6.png" alt="logo">
+    </header>
+    <fieldset>
+        <legend><b>Menú</b></legend>
+        <h3>Tacos grandes</h3>
+        <p>Todos incluyen cilanto y cebolla</p>
+        <ul>
+            <li>Asado................$35</li>
+            <li>Chorizo.............$35</li>
+            <li>Chuleta.............$35</li>
+            <li>Pastor................$35</li>
+            <li>Suadero............$35</li>
+        </ul>
+        <h3>Tacos pequeños</h3>
+        <p>Con cilantro y cebolla</p>
+        <ul>
+            <li>Asado................$18</li>
+            <li>Chorizo.............$18</li>
+            <li>Chuleta.............$18</li>
+            <li>Pastor................$18</li>
+            <li>Suadero............$18</li>
+        </ul>
+        <h3>Especiales</h3>
+        <p>Haz tu combo con refresco por $11 más</p>
+        <dl>
+            <dt><B>Que me mira</B> ...........$40</dt>
+            <dd>Tortilla frita con huacamole ......$40</dd>
+            <dt><B>Hydro</B> ........$45</dt>
+            <dd>Con tortilla de harina, frijoles y queso</dd>
+            <dt><b>Dieta</b> .....$40</dt>
+            <dd>Tortilla de maiz, con espinaca</dd>
+        </dl>
+    </fieldset>
+    <fieldset>
+        <legend><b>Sucursales</b></legend>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Ubicación</th>
+                <th>Horarios</th>
+            </tr>
+            <tr>
+                <td>Centro</td>
+                <td><a href="https://goo.gl/maps/HbyPXEemVxHWH9PM8" target="_blank">C. 57 x 62, Parque Santa Lucia</a></td>
+                <td>L - J 6:00pm 12:00am</td>
+            </tr>
+            <tr>
+                <td>Sur</td>
+                <td><a href="https://g.page/Rubygongoraborges?share" target="_blank">C. 25B #380 entre 6B, Vergel IV</a></td>
+                <td>L - J 6:00pm 12:00am</td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend><b>Pedidos</b></legend>
+        <form action="">
+            <label for="Sucursal">Sucursal</label>
+            <select name="Sucursal" id="Sucursal">
+                <option value="Norte" disabled>Norte</option>
+                <option value="Centro">Centro</option>
+                <option value="Sur">Sur</option>
+            </select><br>
+
+            <p>De que taco quiere</p>
+            <input type="checkbox" id="Asado" name="Asado" value="Asado">
+            <label for="Asado">Asado</label>
+            <input type="number" id="AsadoNumber" name="AsadoNumber" placeholder="¿Cuántos?" min="0" max="20"><br>
+            <input type="checkbox" id="chorizo" name="chorizo" value="chorizo">
+            <label for="chorizo">Chorizo</label>
+            <input type="number" id="chorizo" name="chorizo" placeholder="¿Cuántos?" min="0" max="20"><br>
+            <input type="checkbox" id="chuleta" name="chuleta" value="chuleta">
+            <label for="chuleta">Chuleta</label>
+            <input type="number" id="chuleta" name="chuleta" placeholder="¿Cuántos?" min="0" max="20"><br>
+            <input type="checkbox" id="pastor" name="pastor" value="pastor">
+            <label for="pastor">Pastor</label>
+            <input type="number" id="pastor" name="pastor" placeholder="¿Cuántos?" min="0" max="20"><br>
+            <input type="checkbox" id="Suadero" name="Suadero" value="Suadero">
+            <label for="Suadero">Suadero</label>
+            <input type="number" id="suadero" name="suadero" placeholder="¿Cuántos?" min="0" max="20">
+            <br>
+            
+            <p>Especiales</p>
+            <input type="checkbox" id="que me mira" name="que me mira" value="que me mira">
+            <label for="que me mira">Que me mira</label>
+            <input type="number" id="que me mira" name="que me mira" placeholder="¿Cuántos?" min="0" max="20"><br>
+            <input type="checkbox" id="hydro" name="hydro" value="hydro">
+            <label for="hydro">Hydro</label>
+            <input type="number" id="hydro" name="hydro" placeholder="¿Cuántos?" min="0" max="20"><br>
+            <input type="checkbox" id="dieta" name="dieta" value="dieta">
+            <label for="dieta">Dieta</label>
+            <input type="number" id="dieta" name="dieta" placeholder="¿Cuántos?" min="0" max="20">
+            <br><br>
+
+            <label for="Nomnbre">Nombre:</label><br>
+            <input type="text" id="Nombre" name="Nombre" placeholder="¿Cómo te llamas?">
+            <br>
+            <label for="telefono">Telefono de contacto</label><br>
+            <input type="text" id="telefono" name="telefono" placeholder="Telefono de contacto">
+            <br>
+            <label for="Direccion">Dirección</label>
+            <br>
+            <input type="text" id="Direccion" name="Direccion" placeholder="¿Dirección de envio?">
+            <br><br>
+            <button type="submit">Enviar pedido</button>
+        </form>
+
+    </fieldset>
+</body>
+</html>
